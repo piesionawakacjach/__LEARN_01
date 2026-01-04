@@ -1,0 +1,3 @@
+2025-12-30 16:07:12.459709 | Pole1: a, Pole2: b, Pole3: c, Wybor: Opcja A
+2025-12-30 16:08:53.849634 | Pole1: aaa, Pole2: aaa, Pole3: aaa, Wybor: Opcja B
+2026-01-03 14:05:38.576941 | Pole1: , Pole2: , Pole3: , Wybor: INSERT
