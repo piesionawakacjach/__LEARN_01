@@ -112,7 +112,7 @@ def form():
         elif wybor == "DELETE":
             repo.DELETE(id)
         elif wybor == "SELECT":
-            print("TEST")
+            print("TEST wersja kolejna")
         else:
     
             pass
