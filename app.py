@@ -5,12 +5,30 @@ import sqlite3
 from dataclasses import dataclass
 from pathlib import Path
 
+from flask_sqlalchemy import SQLAlchemy
+
 app = Flask(__name__)
 
+app.config.from_pyfile('config.cfg')
+db = SQLAlchemy(app)
+
+class Vendor(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50))
+    priority = db.Column(db.Integer)
+    active = db.Column(db.Boolean)
 #DATA_FILE = "dane.txt"
+
+@app.route('/test_alchemy')
+def test_alchemy():
+    db.create_all()
+    return '''Hello Flask-SQLAlchemy'''
+
 PLIK_TXT = Path("moj_plik.txt")
 PLIK_DB = Path("baza.db")
 SEP = ";"
+
+
 
 
 def get_db():
